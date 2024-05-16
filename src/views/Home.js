@@ -11,7 +11,7 @@ export const Home = () => {
 
     return (
         <div className='home-view'>
-            <MovieMatrix movies={movies}/>
+            <MovieMatrix movies={movies} className='home-view__matrix'/>
             <div className='home-view__pagenav'>
                 <PageNavigation onChange={(newPage) => setPage(newPage)}/>
             </div>

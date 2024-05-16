@@ -6,7 +6,6 @@
     border-width: 0;
     margin-left: 5px;
     margin-right: 5px;
-    z-index:-1;
 }
 
 .movie-card__inner {
@@ -15,7 +14,6 @@
     height: 100%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    z-index:-1;
 
 }
 
@@ -38,8 +36,12 @@
     transform: rotateY(180deg);
 }
 
-.back__body{
-    margin:4%
+.back__body--light, .back__body--dark{
+    margin: 4%
+}
+
+.back__body--dark{
+
 }
 
 .body__synopsis-container{
@@ -80,6 +82,7 @@
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+    margin-right: 5px;
 }
 
  .body__release, .body__synopsis, .body__genres{

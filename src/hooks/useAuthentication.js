@@ -3,6 +3,7 @@ import {AuthContext} from "../context/AuthContext";
 import {UserContext} from "../context/UserContext";
 import bcrypt from "bcryptjs";
 
+//TODO: Change this hook and call authentication service
 
 //Add some fake users here
 const userList = [
@@ -11,6 +12,7 @@ const userList = [
         passwordHash: '$2a$10$CwTycUXWue0Thq9StjUM0un2fk7f659845GwyUHPtOWPpYtSs9Yjy',
         userApiMockup: {
             user: {
+                id: 'gabi1',
                 name: 'Gabriel Martinez',
                 myList: [],
                 rented: [],
@@ -32,7 +34,7 @@ const generateHash = (password)  => {
 export const useAuthentication = () => {
 
     const {setAuthToken} = useContext(AuthContext);
-    const {setUser} = useContext(UserContext);
+    const {user, setUser} = useContext(UserContext);
 
     const logIn = (username, password) => {
         let error = null;
@@ -49,7 +51,10 @@ export const useAuthentication = () => {
         }
         else{
             if (userMatch.passwordHash === hash){
-                setUser(userMatch.userApiMockup.user)
+                // Testing purpose, use local storage if available
+                if(user===null || user.id !== userMatch.userApiMockup.user.id){
+                    setUser(userMatch.userApiMockup.user)
+                }
                 setAuthToken(userMatch.userApiMockup.authToken)
             }
             else{
@@ -65,7 +70,6 @@ export const useAuthentication = () => {
     }
 
     const logOut = () => {
-        setUser(null);
         setAuthToken(null);
     }
 

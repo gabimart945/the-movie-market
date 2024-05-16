@@ -13,12 +13,12 @@ const chunkArray = (array, chunkSize) => {
     return chunks;
 }
 
-export const MovieMatrix = ({movies}) => {
+export const MovieMatrix = ({movies, className}) => {
 
     const chunks = chunkArray(movies, moviesPerRow)
 
     return (
-        <div>
+        <div className={className}>
             <Container>
                 {chunks.map((chunk, row_index) => {
                     return (

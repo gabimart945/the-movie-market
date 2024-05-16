@@ -55,6 +55,7 @@ export const Header = () => {
                                     type="switch"
                                     id="custom-switch"
                                     label="Dark Mode"
+                                    checked={theme==='dark'}
                                     onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                                 />
                             </Nav.Item>
