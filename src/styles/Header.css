@@ -1,0 +1,28 @@
+.header--dark{
+    background-color: rgb(38, 39, 42);
+    color: rgb(255,255,255);
+}
+
+.header--light{
+    background-color: rgb(168, 168, 168);
+    color: rgb(0,0,0);
+}
+
+div[class*="navbar__switch"] > input{
+    cursor: pointer;
+}
+
+div[class*="navbar__switch"]{
+    padding-top: 8px;
+    margin-left: 10px;
+}
+
+.navbar__item--user{
+    width:100px;
+}
+
+.navbar__search{
+    width: 300px;
+    margin-right: 150px;
+    z-index:1000;
+}

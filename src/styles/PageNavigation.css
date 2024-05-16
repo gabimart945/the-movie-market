@@ -1,0 +1,7 @@
+.pagenav__icon{
+    cursor: pointer;
+}
+
+.pagenav__icon:hover{
+    font-size: 18px;
+}

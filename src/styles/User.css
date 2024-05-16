@@ -1,0 +1,21 @@
+.user-view__my-list, .user-view__acquirments{
+    margin-top: 30px;
+}
+
+.my-list__title, .acquirments__title{
+    text-align: center;
+}
+
+
+.user-view__rents{
+    margin-top: 30px;
+}
+
+.rents__title{
+    margin-bottom: 30px;
+}
+
+.user-view__row{
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -1,0 +1,105 @@
+.movie-card {
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+    perspective: 1000px;
+    border-width: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index:-1;
+}
+
+.movie-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    z-index:-1;
+
+}
+
+.movie-card:hover .movie-card__inner {
+    transform: rotateY(180deg);
+
+}
+
+.inner__front, .inner__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.inner__back {
+    transform: rotateY(180deg);
+}
+
+.back__body{
+    margin:4%
+}
+
+.body__synopsis-container{
+    height: 120px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 4px;
+}
+
+.body__synopsis-container::-webkit-scrollbar {
+    display: none;
+}
+
+.front__poster{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+.body__synopsis > span {
+    cursor: pointer;
+    font-size: 8px;
+}
+
+.inner__footer{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    height: 45px;
+    bottom: 0;
+}
+
+.footer__button{
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+ .body__release, .body__synopsis, .body__genres{
+    font-size: 11px;
+    margin-bottom: 0;
+}
+.body__title{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.body__rating{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.body__rating > .rating__span{
+    font-size: 8px;
+}
+
+.body__hr{
+    margin:0
+}

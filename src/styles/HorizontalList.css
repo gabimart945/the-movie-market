@@ -1,0 +1,22 @@
+.rotating-list{
+    display: flex;
+    justify-content: center;
+}
+
+.rotating-list__icon{
+    width: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.icon--arrow{
+    cursor: pointer;
+    color: rgb(168, 168, 168);
+    font-size: 50px;
+}
+
+.icon--arrow:hover{
+    font-size: 54px;
+}
