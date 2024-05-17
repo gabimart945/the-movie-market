@@ -7,16 +7,13 @@ export const UserList = ({movieIds}) => {
     const {movies} = useMovieList(movieIds)
 
     return(
-
-                    <HorizontalList maxItems={4} rotate={true}>
-                        {movies.map((movie, index) => (
-                            <MovieCard
-                                key={index}
-                                movie={movie}
-                            />
-                        ))}
-                    </HorizontalList>
-
-
+        <HorizontalList maxItems={4} rotate={true}>
+            {movies.map((movie, index) => (
+                <MovieCard
+                    key={index}
+                    movie={movie}
+                />
+            ))}
+        </HorizontalList>
     )
 }
