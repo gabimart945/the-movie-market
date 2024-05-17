@@ -1,14 +1,14 @@
-.stars-outer {
+.rating__stars {
     display: inline-block;
     position: relative;
     font-family: FontAwesome;
 }
 
-.stars-outer::before {
+.rating__stars::before {
     content: "\f006 \f006 \f006 \f006 \f006";
 }
 
-.stars-inner {
+.stars__inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 
-.stars-inner::before {
+.stars__inner::before {
     content: "\f005 \f005 \f005 \f005 \f005";
     color: #f8ce0b;
 }
