@@ -36,7 +36,6 @@ export const useUser = () => {
     }
 
     const acquireMovie = (movieId) => {
-        console.log(user)
         setUser(Object.assign({}, user, {
             acquired: user.acquired.concat([movieId])
         }));

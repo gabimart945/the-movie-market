@@ -16,8 +16,6 @@ export const SearchBar =() => {
     }, [results]);
 
     const handleOnSearch = (string, results) => {
-        console.log('onSearch')
-        console.log(results)
         setSearchTerm(string)
     };
 

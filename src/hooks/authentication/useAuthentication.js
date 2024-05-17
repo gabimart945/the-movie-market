@@ -46,7 +46,6 @@ const userList = [
 const generateHash = (password)  => {
     const salt = '$2a$10$CwTycUXWue0Thq9StjUM0u';
     const hash = bcrypt.hashSync(password, salt)
-    console.log('Password: '+password+', hash: '+hash);
     return hash;
 }
 
