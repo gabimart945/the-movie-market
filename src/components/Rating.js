@@ -7,6 +7,9 @@ export const Rating = ({rating, className}) => {
 
     const percentage = String(rating * 100 / 5) + '%';
 
+    // Se utiliza un estilo inline porque el atributo depende directamente del valor de una variable,
+    // Se podrían haber definido distintas clases, pero esta alternativa me pareció más elegante a pesar
+    // de tratarse de una mala práctica
     return (
         <div className={className}>
             <div className="rating__stars">
