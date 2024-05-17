@@ -2,7 +2,7 @@ import '../styles/MovieDetails.css'
 import {useParams} from "react-router";
 import {useMovieDetails} from '../hooks/movies/useMovieDetails'
 import Container from "react-bootstrap/Container";
-import {Button, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {Rating} from "../components/Rating";
 import {CastList} from "../components/CastList";
 import {MovieActions} from "../components/MovieActions";
@@ -18,7 +18,7 @@ export const MovieDetails = () => {
                     <Container className='details-view__info'>
                         <Row>
                             <Col xs={4}>
-                                <img src={details.cover} className="info__cover"/>
+                                <img src={details.cover} className="info__cover" alt={details.title}/>
                             </Col>
                             <Col xs={8}>
                                 <h1>{details.title}</h1>

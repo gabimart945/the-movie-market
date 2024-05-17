@@ -1,6 +1,6 @@
 import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import {ThemeContext} from "./context/ThemeContext";
 import {AuthContext} from "./context/AuthContext";
 import {GlobalRouter} from "./routes/GlobalRouter";

@@ -2,7 +2,7 @@ import {useContext} from "react";
 import {UserContext} from "../context/UserContext";
 import {UserList} from "../components/UserList";
 import '../styles/User.css'
-import {Container, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {RentTable} from "../components/RentTable";
 
 export const User = () => {

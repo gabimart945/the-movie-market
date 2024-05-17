@@ -1,12 +1,10 @@
 import {useParams} from "react-router";
-import {useNavigate} from "react-router-dom";
 import YouTube, {} from "react-youtube";
 import '../styles/Player.css'
 
 
 export const Player = () => {
-    const {movieId, videoId} = useParams()
-    const navigate = useNavigate()
+    const {videoId} = useParams()
 
     const opts = {
         height: '800',

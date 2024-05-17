@@ -1,4 +1,4 @@
-import {Button, OverlayTrigger, Tooltip} from "react-bootstrap";
+import {Button} from "react-bootstrap";
 import {useUser} from "../hooks/user/useUser";
 import {useNavigate} from "react-router-dom";
 import '../styles/MovieActions.css'
@@ -14,7 +14,7 @@ export const MovieActions = ({title, movieId, videoId}) => {
     return (
         <div className='movie__actions'>
             {canView(movieId) ?
-                <Button variant="success" onClick={() => navigate(`/player/${movieId}/${videoId}`)}><FontAwesomeIcon icon={faPlay} /> Play</Button> :
+                <Button variant="success" onClick={() => navigate(`/player/${videoId}`)}><FontAwesomeIcon icon={faPlay} /> Play</Button> :
                 <>
                     <Button onClick={() => rentMovie(movieId, title)}><FontAwesomeIcon icon={faClock} /> Alquilar</Button>
                     <Button onClick={() => acquireMovie(movieId)}><FontAwesomeIcon icon={faCartShopping} /> Comprar</Button>

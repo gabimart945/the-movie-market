@@ -12,7 +12,7 @@ export const HorizontalList = ({maxItems, rotate, children}) => {
 
     useEffect(() => {
         setItems(children.slice(0, maxItems))
-    }, [children]);
+    }, [children, maxItems]);
 
     const rotateLeft = (array) => {
         let newArray = array;

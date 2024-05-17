@@ -32,7 +32,7 @@ export const GlobalRouter = () => {
                 <Route path='/home' element={<Layout><PrivateRoute><Home/></PrivateRoute></Layout>}/>
                 <Route path='/categories' element={<Layout><PrivateRoute><Categories/></PrivateRoute></Layout>}/>
                 <Route path="/movie/:movieId" element={<Layout><PrivateRoute><MovieDetails/></PrivateRoute></Layout>} />
-                <Route path="/player/:movieId/:videoId" element={<Layout><PrivateRoute><Player/></PrivateRoute></Layout>} />
+                <Route path="/player/:videoId" element={<Layout><PrivateRoute><Player/></PrivateRoute></Layout>} />
                 <Route path='/user' element={<Layout><PrivateRoute><User/></PrivateRoute></Layout>}/>
                 <Route path="*" element={<Layout><Login/></Layout>} />
             </Routes>
