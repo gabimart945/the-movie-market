@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
 import {useSearchMovies} from "../hooks/movies/useSearchMovies";
 import {useNavigate} from "react-router-dom";
+import '../styles/SearchBar.css'
 
 export const SearchBar =() => {
 
@@ -21,13 +22,7 @@ export const SearchBar =() => {
 
     const formatResult = (item) => {
         return (
-            <>
-                <span
-                    style={{ display: 'block', textAlign: 'left', cursor: 'pointer' }}
-                >
-                    {item.name}
-                </span>
-            </>
+            <span className={"searchbar__result"}>{item.name}</span>
         )
     }
 

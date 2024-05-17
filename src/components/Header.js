@@ -38,7 +38,7 @@ export const Header = () => {
                                 </Nav.Item>
                             </Nav> : ''
                         }
-                        <Nav className="justify-content-end" style={{width: "100%"}}>
+                        <Nav className="justify-content-end" >
                             {authToken != null ?
                                 <div className="navbar__search">
                                     <SearchBar></SearchBar>
