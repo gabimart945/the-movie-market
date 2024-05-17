@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ReactSearchAutocomplete} from "react-search-autocomplete";
-import {useSearchMovies} from "../hooks/useSearchMovies";
+import {useSearchMovies} from "../hooks/movies/useSearchMovies";
 import {useNavigate} from "react-router-dom";
 
 export const SearchBar =() => {

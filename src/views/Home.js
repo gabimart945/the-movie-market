@@ -1,6 +1,6 @@
 import {MovieMatrix} from "../components/MovieMatrix";
 import {useState} from "react";
-import {useDiscover} from "../hooks/useDiscover";
+import {useDiscover} from "../hooks/movies/useDiscover";
 import {PageNavigation} from "../components/PageNavigation";
 import '../styles/Home.css'
 

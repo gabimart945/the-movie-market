@@ -1,5 +1,5 @@
 import {useContext, useEffect} from "react";
-import {UserContext} from "../context/UserContext";
+import {UserContext} from "../../context/UserContext";
 
 
 export const useUser = () => {
@@ -36,6 +36,7 @@ export const useUser = () => {
     }
 
     const acquireMovie = (movieId) => {
+        console.log(user)
         setUser(Object.assign({}, user, {
             acquired: user.acquired.concat([movieId])
         }));

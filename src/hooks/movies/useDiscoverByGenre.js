@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from "react";
-import {responseToMovies} from '../utils/Utils'
-import {AuthContext} from "../context/AuthContext";
+import {responseToMovies} from '../../utils/Utils'
+import {AuthContext} from "../../context/AuthContext";
 
 
 export  const useDiscoverByGenre = (genre, page) => {

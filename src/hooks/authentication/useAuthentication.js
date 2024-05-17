@@ -1,6 +1,6 @@
 import {useContext} from "react";
-import {AuthContext} from "../context/AuthContext";
-import {UserContext} from "../context/UserContext";
+import {AuthContext} from "../../context/AuthContext";
+import {UserContext} from "../../context/UserContext";
 import bcrypt from "bcryptjs";
 
 //TODO: Change this hook and call authentication service
@@ -8,15 +8,34 @@ import bcrypt from "bcryptjs";
 //Add some fake users here
 const userList = [
     {
-        username: 'gabi1',
-        passwordHash: '$2a$10$CwTycUXWue0Thq9StjUM0un2fk7f659845GwyUHPtOWPpYtSs9Yjy',
+        username: 'test',
+        passwordHash: '$2a$10$CwTycUXWue0Thq9StjUM0ufAwiHylND31x4P/qHYAr.lOt2Y1w7p2',
         userApiMockup: {
             user: {
-                id: 'gabi1',
-                name: 'Gabriel Martinez',
-                myList: [],
-                rented: [],
-                acquired: []
+                id: 'test',
+                name: 'Test User',
+                myList: [823464, 653346, 693134, 1111873, 967847],
+                rented: [
+                    {
+                        "movieId": 1011985,
+                        "title": "Kung Fu Panda 4",
+                        "from": 1715925625731,
+                        "to": 1716184825731
+                    },
+                    {
+                        "movieId": 475557,
+                        "title": "Joker",
+                        "from": 1715925649865,
+                        "to": 1716184849865
+                    },
+                    {
+                        "movieId": 155,
+                        "title": "El caballero oscuro",
+                        "from": 1715925660636,
+                        "to": 1716184860636
+                    }
+                ],
+                acquired: [934632, 140607]
             },
             authToken: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTA0YjQ3MWFjODg2ZmFhODM3MTU2Nzc3MzdkYzViMSIsInN1YiI6IjY2NDNiNGYxMDE2MzVlZWQ3M2MxZDczNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8uN-wpSsKlUaoZdlbHKfyxATPa2kHwjHYBAOkUqLMeM'
         }
@@ -27,7 +46,7 @@ const userList = [
 const generateHash = (password)  => {
     const salt = '$2a$10$CwTycUXWue0Thq9StjUM0u';
     const hash = bcrypt.hashSync(password, salt)
-    //console.log('Password: '+password+', hash: '+hash);
+    console.log('Password: '+password+', hash: '+hash);
     return hash;
 }
 

@@ -1,6 +1,6 @@
 import {MovieCard} from "./MovieCard";
 import {HorizontalList} from "./HorizontalList";
-import {useMovieList} from '../hooks/useMovieList'
+import {useMovieList} from '../hooks/movies/useMovieList'
 
 export const UserList = ({movieIds}) => {
 

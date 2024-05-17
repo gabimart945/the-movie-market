@@ -1,5 +1,5 @@
 import {Button, OverlayTrigger, Tooltip} from "react-bootstrap";
-import {useUser} from "../hooks/useUser";
+import {useUser} from "../hooks/user/useUser";
 import {useNavigate} from "react-router-dom";
 import '../styles/MovieActions.css'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

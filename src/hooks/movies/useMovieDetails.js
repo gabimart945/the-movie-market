@@ -1,12 +1,13 @@
 import {useContext, useEffect, useState} from "react";
-import {responseToMovies} from '../utils/Utils'
-import {AuthContext} from "../context/AuthContext";
+import {AuthContext} from "../../context/AuthContext";
+import {responseToDetails} from "../../utils/Utils";
 
-export  const useDiscover = (page) => {
 
-    const [movies, setMovies] = useState([]);
+export const useMovieDetails = (movieId) => {
+
+    const [details, setDetails] = useState(null);
     const {authToken} = useContext(AuthContext)
-    const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=es-ES&page=${page}&sort_by=popularity.desc`
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?append_to_response=videos,credits&language=es-ES`
     const options = {
         method: 'GET',
         headers: {
@@ -20,11 +21,11 @@ export  const useDiscover = (page) => {
         const fetchRequest = async () => {
             let res = await fetch(url, options);
             let data = await res.json();
-            setMovies(responseToMovies(data));
+            setDetails(responseToDetails(data));
         };
 
         fetchRequest();
-    }, [page])
+    }, [movieId])
 
-    return { movies }
+    return { details }
 }

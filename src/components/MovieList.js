@@ -1,5 +1,5 @@
 import {MovieCard} from "./MovieCard";
-import {useDiscoverByGenre} from "../hooks/useDiscoverByGenre";
+import {useDiscoverByGenre} from "../hooks/movies/useDiscoverByGenre";
 import {HorizontalList} from "./HorizontalList";
 
 

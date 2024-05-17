@@ -1,6 +1,6 @@
 import '../styles/MovieDetails.css'
 import {useParams} from "react-router";
-import {useMovieDetails} from '../hooks/useMovieDetails'
+import {useMovieDetails} from '../hooks/movies/useMovieDetails'
 import Container from "react-bootstrap/Container";
 import {Button, Col, Row} from "react-bootstrap";
 import {Rating} from "../components/Rating";

@@ -3,7 +3,7 @@ import {Form, Button} from 'react-bootstrap'
 import '../styles/Login.css'
 import {ThemeContext} from "../context/ThemeContext";
 import {AuthContext} from "../context/AuthContext";
-import {useAuthentication} from "../hooks/useAuthentication";
+import {useAuthentication} from "../hooks/authentication/useAuthentication";
 import {useEffect} from "react";
 import {useNavigate} from 'react-router-dom';
 export const Login = () => {
@@ -33,10 +33,10 @@ export const Login = () => {
     }
 
     return (
-        <div className={"login-view--"+theme}>
+        <div className={"login-view--" + theme}>
             <h1 className="login-view__title">Login</h1>
+            <p>User: test ; Password: test1234</p>
             <Form className="login-view__form">
-
                 <Form.Label className="form__label" htmlFor="inputName">Name</Form.Label>
                 <Form.Control
                     className="form__input"
@@ -46,7 +46,7 @@ export const Login = () => {
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                 />
-                {error!==null && error.type==='username'? <p className='form__error'>{'* '+error.msg}</p>:''}
+                {error !== null && error.type === 'username' ? <p className='form__error'>{'* ' + error.msg}</p> : ''}
                 <Form.Label className="form__label" htmlFor="inputPassword5">Password</Form.Label>
                 <Form.Control
                     className="form__input"
@@ -56,11 +56,11 @@ export const Login = () => {
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                 />
-                {error!==null && error.type==='password'? <p className='form__error'>{'* '+error.msg}</p>:''}
+                {error !== null && error.type === 'password' ? <p className='form__error'>{'* ' + error.msg}</p> : ''}
 
                 <Button
                     className="form__button"
-                    onClick={()=> handleSubmit(name, password)}
+                    onClick={() => handleSubmit(name, password)}
                     disabled={name === '' || password.length < 8}
                 >
                     Log In

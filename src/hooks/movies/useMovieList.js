@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from "react";
-import {responseToMovie} from '../utils/Utils'
-import {AuthContext} from "../context/AuthContext";
+import {responseToMovie} from '../../utils/Utils'
+import {AuthContext} from "../../context/AuthContext";
 
 export  const useMovieList = (movieIds) => {
 

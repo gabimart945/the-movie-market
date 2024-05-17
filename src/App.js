@@ -9,8 +9,7 @@ import {useLocalStorage} from "./hooks/useLocalStorage";
 
 function App() {
 
-
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useLocalStorage('theme', 'light')
     const [user, setUser] = useLocalStorage('user', null)
     const [authToken, setAuthToken] = useLocalStorage('auth', null)
 
