@@ -9,7 +9,7 @@ import {useNavigate} from 'react-router-dom';
 export const Login = () => {
 
     const {theme} = useContext(ThemeContext)
-    const {sessionId} = useContext(AuthContext)
+    const {authToken} = useContext(AuthContext)
     const navigate = useNavigate()
     const {logIn} = useAuthentication()
     const [name, setName] = useState('')
@@ -18,13 +18,13 @@ export const Login = () => {
 
 
     useEffect(()=>{
-        if(sessionId!==null){
+        if(authToken!==null){
             navigate('/home')
         }
         else{
             navigate('/login')
         }
-    },[sessionId])
+    },[authToken])
 
 
     const handleSubmit = () => {
